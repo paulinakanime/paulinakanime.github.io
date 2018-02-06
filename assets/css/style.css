@@ -30,7 +30,7 @@ img {
 
 
 /*==========================================
-PRE LOADER 
+PRE LOADER
 ==========================================*/
 
 .preloader {
@@ -583,7 +583,7 @@ textarea::-ms-input-placeholder
     background-color: transparent;
 }
 .navbar-brand{
-	margin-top:-5px;	
+	margin-top:-5px;
 }
 
 
@@ -1275,9 +1275,9 @@ textarea::-ms-input-placeholder
     }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xkeyframes 
+xkeyframes
 
 -------------------------------- */
 @-webkit-keyframes cd-rotate {
@@ -1688,5 +1688,3 @@ xkeyframes
 	text-decoration: none;
 
 }
-
-
