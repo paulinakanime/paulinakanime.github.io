@@ -84,19 +84,9 @@
         
         <!-- Birthday Section (small + neat) -->
         <div style="background:#ff7e5f; color:white; padding:10px 20px; border-radius:30px; display:inline-block; margin-bottom:20px; font-size:14px; box-shadow:0 2px 5px rgba(0,0,0,0.2);">
-            <?php
-                $today = date("Y-m-d");
-                $birthday = date("Y") . "-09-16"; // this year's birthday
-
-                if ($today < $birthday) {
-                    $days_left = (strtotime($birthday) - strtotime($today)) / (60*60*24);
-                    echo "🎂 My 31st Birthday is in <strong>$days_left days</strong>!";
-                } elseif ($today == $birthday) {
-                    echo "🎉 It’s My 31st Birthday Today!";
-                } else {
-                    echo "🥳 I Turned 31 on 16 September!";
-                }
-            ?>
+        <P>
+			My 31st Birthday is coming up !!, 16 September
+		</P>
         </div>
 
     </div>
