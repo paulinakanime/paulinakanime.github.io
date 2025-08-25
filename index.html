@@ -81,57 +81,102 @@
   <meta charset="UTF-8">
   <title>Birthday Announcement</title>
   <style>
-    .birthday-banner {
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdfdfd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .birthday-card {
       background: linear-gradient(135deg, #ff8a00, #e52e71);
       color: white;
       text-align: center;
-      padding: 30px;
-      border-radius: 15px;
-      font-family: Arial, sans-serif;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      margin: 20px auto;
-      max-width: 600px;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      max-width: 500px;
     }
-    .birthday-banner h1 {
-      font-size: 2.5em;
-      margin: 0 0 10px;
+
+    .birthday-card h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
     }
-    .birthday-banner p {
+
+    .birthday-card p {
       font-size: 1.2em;
+      margin-top: 0;
+    }
+
+    /* calendar style */
+    .calendar {
+      background: white;
+      color: #333;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 20px;
+      display: inline-block;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .calendar h2 {
       margin: 0;
+      font-size: 1.4em;
+      color: #e52e71;
+    }
+
+    .calendar span {
+      display: block;
+      font-size: 2em;
+      font-weight: bold;
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
 
 <?php
-  // Set birthday date
+  // Birthday date
   $birthday = strtotime("2025-09-16");
   $today = strtotime(date("Y-m-d"));
-  
+
+  echo "<div class='birthday-card'>";
+
   if ($today < $birthday) {
       $days_left = ceil(($birthday - $today) / 86400);
       echo "
-        <div class='birthday-banner'>
-          <h1>🎂 My 31st Birthday is Coming Up!</h1>
-          <p>Counting down... only <strong>$days_left days</strong> to go until 16 September!</p>
+        <h1>🎂 My 31st Birthday is Coming!</h1>
+        <p>Counting down... only <strong>$days_left days</strong> left!</p>
+        <div class='calendar'>
+          <h2>Birthday Date</h2>
+          <span>16 Sept</span>
         </div>
       ";
   } elseif ($today == $birthday) {
       echo "
-        <div class='birthday-banner'>
-          <h1>🎉 It’s My 31st Birthday Today!</h1>
-          <p>Grateful for another year of life, growth, and blessings 💙</p>
+        <h1>🎉 It’s My 31st Birthday Today!</h1>
+        <p>Grateful for another year of life, growth, and blessings 💙</p>
+        <div class='calendar'>
+          <h2>Today 🎂</h2>
+          <span>16 Sept</span>
         </div>
       ";
   } else {
       echo "
-        <div class='birthday-banner'>
-          <h1>🥳 I Turned 31 on 16 September!</h1>
-          <p>Thank you for being part of my journey 💫</p>
+        <h1>🥳 I Turned 31 on 16 September!</h1>
+        <p>Thank you for celebrating with me 💫</p>
+        <div class='calendar'>
+          <h2>Birthday Was</h2>
+          <span>16 Sept</span>
         </div>
       ";
   }
+
+  echo "</div>";
+?>
 										  
                                           <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
                                               <div class="home-contact">
