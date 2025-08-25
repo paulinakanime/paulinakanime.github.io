@@ -77,6 +77,62 @@
                                          I am a results-oriented and self-motivated Senior IT Systems Administrator with eight years of experience in technology and software solutions. Throughout my career, I have successfully overseen and executed over four major projects, including School Management Systems, Point of Sale platforms, Wi-Fi rollout Project and an Immunisation Notification System. Notably, I am the co-founder and developer of a recognized health-focused operating system, health264.com. I have a strong interest in ERP systems, particularly SAP, and I hold a SAP Certificate from SAP University Alliance-CAPE TOWN. I am currently pursuing a Master's degree in Business Informatics at the Namibia University of Science and Technology. My goal is to expand my knowledge in Business Informatics and contribute to an organization that values continuous growth and professional development.
                                        </p>
                                       <div class="row">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Announcement</title>
+  <style>
+    .birthday-banner {
+      background: linear-gradient(135deg, #ff8a00, #e52e71);
+      color: white;
+      text-align: center;
+      padding: 30px;
+      border-radius: 15px;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .birthday-banner h1 {
+      font-size: 2.5em;
+      margin: 0 0 10px;
+    }
+    .birthday-banner p {
+      font-size: 1.2em;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+<?php
+  // Set birthday date
+  $birthday = strtotime("2025-09-16");
+  $today = strtotime(date("Y-m-d"));
+  
+  if ($today < $birthday) {
+      $days_left = ceil(($birthday - $today) / 86400);
+      echo "
+        <div class='birthday-banner'>
+          <h1>🎂 My 31st Birthday is Coming Up!</h1>
+          <p>Counting down... only <strong>$days_left days</strong> to go until 16 September!</p>
+        </div>
+      ";
+  } elseif ($today == $birthday) {
+      echo "
+        <div class='birthday-banner'>
+          <h1>🎉 It’s My 31st Birthday Today!</h1>
+          <p>Grateful for another year of life, growth, and blessings 💙</p>
+        </div>
+      ";
+  } else {
+      echo "
+        <div class='birthday-banner'>
+          <h1>🥳 I Turned 31 on 16 September!</h1>
+          <p>Thank you for being part of my journey 💫</p>
+        </div>
+      ";
+  }
+										  
                                           <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
                                               <div class="home-contact">
                                               </div>
