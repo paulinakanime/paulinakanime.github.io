@@ -91,6 +91,31 @@
                   </div>
               </div>
             </section>
+
+			</section>
+
+<!-- Birthday Section -->
+<section id="birthday" class="sections text-center" style="padding:60px 20px; background:linear-gradient(45deg,#ff7e5f,#feb47b); color:white; border-radius:20px; margin:40px auto; max-width:800px;">
+    <?php
+        $today = date("Y-m-d");
+        $birthday = date("Y") . "-09-16"; // this year's birthday
+
+        if ($today < $birthday) {
+            // Countdown
+            $days_left = (strtotime($birthday) - strtotime($today)) / (60*60*24);
+            echo "<h2>🎂 My 31st Birthday is Coming Up!</h2>";
+            echo "<p>Counting down... only <strong>$days_left days</strong> to go until 16 September!</p>";
+        } elseif ($today == $birthday) {
+            // Birthday today
+            echo "<h2>🎉 It’s My 31st Birthday Today!</h2>";
+            echo "<p>Grateful for another year of life, growth, and blessings 💙</p>";
+        } else {
+            // After birthday
+            echo "<h2>🥳 I Turned 31 on 16 September!</h2>";
+            echo "<p>Looking forward to new adventures and opportunities ahead ✨</p>";
+        }
+    ?>
+</section>
         </header>
         <section  id="skills" class="service2 sections lightbg">
           <div class="row">
